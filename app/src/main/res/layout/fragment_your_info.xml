@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".YourInfoFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/toolBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Your Info"
+                android:textColor="@color/black"
+                android:textSize="35sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Eductionalinfo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="33.33dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="33.33dp"
+                android:text="Educational Info"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/toolBar">
+
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/education"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="33.33dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="33.33dp"
+                android:text="Education"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/Eductionalinfo">
+
+            </TextView>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvEducation"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33.33dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="33.33dp"
+                app:hintTextColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/education">
+
+                <AutoCompleteTextView
+                    android:id="@+id/eduAutoComplete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:text="Select your qualification" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvYearOfPassing"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="33.33dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="33.33dp"
+                android:text="Year Of Passing"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tvEducation" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvYop"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33.33dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="33.33dp"
+                app:hintTextColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/tvYearOfPassing">
+
+                <AutoCompleteTextView
+                    android:id="@+id/tvautoComplete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter the year of passing "
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvGrade"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="33.33dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="33.33dp"
+                android:text="GRADE"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tvYop"></TextView>
+
+            <EditText
+                android:id="@+id/etGrade"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="33.33dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="33.33dp"
+                android:hint="Enter the grade"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tvGrade"></EditText>
+
+            <TextView
+                android:id="@+id/tvProfessionalInfo"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="33.33dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="33.33dp"
+                android:text="Professional Info"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/etGrade" />
+
+            <TextView
+                android:id="@+id/tvExperience"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="33.33dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="33.33dp"
+                android:text="Experience"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tvProfessionalInfo" />
+
+            <EditText
+                android:id="@+id/etExperience"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="33.33dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="33.33dp"
+                android:hint="Enter your Experience "
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tvExperience" />
+
+            <TextView
+                android:id="@+id/tvdesignation"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="33.33dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="33.33dp"
+                android:text="Designation"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/etExperience" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvDes"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33.33dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="33.33dp"
+                app:hintTextColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/tvdesignation">
+
+                <AutoCompleteTextView
+                    android:id="@+id/tvautoCompleteDes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your designation "
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvDomain"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="33.33dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="33.33dp"
+                android:text="Designation"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/tvDes" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvDom"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33.33dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="33.33dp"
+                app:hintTextColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@+id/tvDomain">
+
+                <AutoCompleteTextView
+                    android:id="@+id/tvautoCompleteDom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter your domain"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnPrevious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="33.33dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/white"
+                android:text="Previous"
+                android:textColor="@color/darkblue"
+                app:layout_constraintEnd_toStartOf="@+id/btnNxt"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvDom" />
+
+            <Button
+                android:id="@+id/btnNxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Next"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btnPrevious"
+                app:layout_constraintTop_toBottomOf="@id/tvDom" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+
+
+</FrameLayout>

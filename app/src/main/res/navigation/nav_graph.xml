@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/registerFragment">
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.naviagationcomponent.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_yourInfoFragment"
+            app:destination="@id/yourInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yourInfoFragment"
+        android:name="com.example.naviagationcomponent.YourInfoFragment"
+        android:label="fragment_your_info"
+        tools:layout="@layout/fragment_your_info" >
+        <action
+            android:id="@+id/action_yourInfoFragment_to_addressInfoFragment"
+            app:destination="@id/addressInfoFragment" />
+        <action
+            android:id="@+id/action_yourInfoFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addressInfoFragment"
+        android:name="com.example.naviagationcomponent.AddressInfoFragment"
+        android:label="fragment_address_info"
+        tools:layout="@layout/fragment_address_info" />
+</navigation>
